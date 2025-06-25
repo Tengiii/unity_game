@@ -2958,7 +2958,7 @@ MonoBehaviour:
   resilience: 1
   magic: 1
   curMana: 1
-  maxMana: 1
+  maxMana: 5
   speed: 3
   maxHealth: 5
   curHealth: 5
