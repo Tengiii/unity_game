@@ -13,7 +13,7 @@ public class StatsMgr : MonoBehaviour
     private float healingMultiplier = 1.2f;
     private float magicMultiplier = 1.2f;
     private float manaMultiplier = 1.3f;
-    
+    private float manaRestoreMultiplier = 1.25f;
 
     [Header("Combat Stats")]
     public int damage;
@@ -25,6 +25,7 @@ public class StatsMgr : MonoBehaviour
     public float magic;
     public float curMana;
     public float maxMana;
+    public float manaRestore;
 
     [Header("Movement Stats")]
     public float speed;
@@ -75,6 +76,7 @@ public class StatsMgr : MonoBehaviour
     {
         magic *= magicMultiplier;
         maxMana *= manaMultiplier;
+        manaRestore *= manaRestoreMultiplier;
         Debug.Log("Magia" + magic);
         Debug.Log("Max Mana" + maxMana);
     }

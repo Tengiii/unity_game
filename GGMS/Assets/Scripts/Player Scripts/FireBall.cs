@@ -19,13 +19,13 @@ public class FireBall : MonoBehaviour
     public Animator anim;
 
     private int damage;
-    private bool isFlying;
-    private bool hitATarget;
+
     void Start()
     {
         rb.velocity = dir * speed;
         RotateFireball();
         damage = Mathf.CeilToInt(initDamage * StatsMgr.Instance.magic);
+        anim.SetBool("isFlying", true);
         Destroy(gameObject, lifeSpan);
     }
 
@@ -42,6 +42,7 @@ public class FireBall : MonoBehaviour
             collision.gameObject.GetComponent<Enemy_Health>().changeHealth(-damage);
             collision.gameObject.GetComponent<Enemy_knockback>().knockback(transform, knockbackForce, knockbackTime, stunTime);
             //AttachToTarget(collision.gameObject.transform);
+            anim.SetBool("isFlying", false);
             anim.SetBool("hitATarget", true);
             Debug.Log("Fire ball hit the player");
             Debug.Log("Damage: "+damage);
@@ -50,6 +51,7 @@ public class FireBall : MonoBehaviour
         else if ((obstacleLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             //AttachToTarget(collision.gameObject.transform);
+            anim.SetBool("isFlying", false);
             anim.SetBool("hitATarget", true);
             Debug.Log("Fire ball hit an obstacle");
         }

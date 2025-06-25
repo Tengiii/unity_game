@@ -2958,7 +2958,8 @@ MonoBehaviour:
   resilience: 1
   magic: 1
   curMana: 1
-  maxMana: 5
+  maxMana: 1
+  manaRestore: 0.5
   speed: 3
   maxHealth: 5
   curHealth: 5
@@ -19742,7 +19743,6 @@ MonoBehaviour:
   fireBallPrefab: {fileID: 7490723377104712749, guid: f35be424e123f334a94f8f988634347a,
     type: 3}
   shootCooldown: 1.5
-  shootTimer: 0
   spellCost: 2
 --- !u!114 &922866730
 MonoBehaviour:
@@ -19757,6 +19757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 71451852}
+  manaRestoreCooldown: 15
 --- !u!1 &953343652
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class PlayerMana : MonoBehaviour
 {
     public Slider slider;
+    public float manaRestoreCooldown;
+    
+    private float manaRestoreTimer;
+    
 
     private void Start()
     {
@@ -14,6 +18,7 @@ public class PlayerMana : MonoBehaviour
     }
     private void Update()
     {
+        manaRestoreTimer -= Time.deltaTime;
         RegMana();    
         StartCoroutine(refreshManaReg());
     }
@@ -34,7 +39,11 @@ public class PlayerMana : MonoBehaviour
         if (StatsMgr.Instance.curMana < StatsMgr.Instance.maxMana)
         {
             StatsMgr.Instance.curMana += 0.3f * Time.deltaTime;
-            Debug.Log(StatsMgr.Instance.curMana);
+            if (Input.GetButtonDown("manaRestore") && manaRestoreTimer <= 0)
+            {
+                StatsMgr.Instance.curMana += StatsMgr.Instance.manaRestore;
+                manaRestoreTimer = manaRestoreCooldown;
+            }
         }
         else
         {

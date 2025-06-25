@@ -6,12 +6,12 @@ public class PlayerFireBall : MonoBehaviour
 {
     public Transform launchPoint;
     public GameObject fireBallPrefab;
+
     private Vector2 aimDir = Vector2.right;
     public float shootCooldown = 1.5f;
-    public float shootTimer;
     public float spellCost;
-
-    
+ 
+    private float shootTimer;
 
     // Update is called once per frame
     void Update()
@@ -20,9 +20,9 @@ public class PlayerFireBall : MonoBehaviour
 
         HandleAiming();
 
-        if (Input.GetButtonDown("FireBall") && shootTimer <= 0)
+        if (Input.GetButtonDown("FireBall") && shootTimer <= 0 && StatsMgr.Instance.curMana >= spellCost)
         {
-            Shoot();
+            Cast();
         }
     }
 
@@ -36,13 +36,12 @@ public class PlayerFireBall : MonoBehaviour
         }
     }
 
-    public void Shoot()
+    public void Cast()
     {
         FireBall fireBall = Instantiate(fireBallPrefab, launchPoint.position, Quaternion.identity).GetComponent<FireBall>();
         fireBall.dir = aimDir;
         shootTimer = shootCooldown;
         consumeMana();
-        
     }
     
     private void consumeMana()
