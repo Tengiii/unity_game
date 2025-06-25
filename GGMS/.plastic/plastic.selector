@@ -1,4 +1,0 @@
-repository "GGMS/GGMS@1375589237860@cloud"
-  path "/"
-    br "/main"
-    co "/main"

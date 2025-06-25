@@ -10,10 +10,12 @@ public class PlayerMana : MonoBehaviour
     private void Start()
     {
         UpdateUI();
+        
     }
     private void Update()
     {
         RegMana();    
+        StartCoroutine(refreshManaReg());
     }
 
     public void changeMana(float amount)
@@ -39,5 +41,10 @@ public class PlayerMana : MonoBehaviour
             return;
         }
 
+    }
+    private IEnumerator refreshManaReg()
+    {
+        UpdateUI();
+        yield return new WaitForSeconds(1);
     }
 }

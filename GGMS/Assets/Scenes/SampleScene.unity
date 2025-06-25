@@ -19743,6 +19743,7 @@ MonoBehaviour:
     type: 3}
   shootCooldown: 1.5
   shootTimer: 0
+  spellCost: 2
 --- !u!114 &922866730
 MonoBehaviour:
   m_ObjectHideFlags: 0

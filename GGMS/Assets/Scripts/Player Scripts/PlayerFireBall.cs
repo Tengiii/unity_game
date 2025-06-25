@@ -9,6 +9,9 @@ public class PlayerFireBall : MonoBehaviour
     private Vector2 aimDir = Vector2.right;
     public float shootCooldown = 1.5f;
     public float shootTimer;
+    public float spellCost;
+
+    
 
     // Update is called once per frame
     void Update()
@@ -38,8 +41,12 @@ public class PlayerFireBall : MonoBehaviour
         FireBall fireBall = Instantiate(fireBallPrefab, launchPoint.position, Quaternion.identity).GetComponent<FireBall>();
         fireBall.dir = aimDir;
         shootTimer = shootCooldown;
+        consumeMana();
         
     }
     
-   
+    private void consumeMana()
+    {
+        StatsMgr.Instance.curMana -= spellCost;
+    }
 }

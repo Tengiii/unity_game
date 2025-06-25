@@ -12,7 +12,6 @@ public class FireBall : MonoBehaviour
     public float knockbackForce;
     public float knockbackTime;
     public float stunTime;
-    public float manaCost;
 
     public LayerMask enemyLayer;
     public LayerMask obstacleLayer;
@@ -56,11 +55,6 @@ public class FireBall : MonoBehaviour
         }
     }
 
-    private void spendMana()
-    {
-        StatsMgr.Instance.curMana -= manaCost;
-
-    }
     /*private void AttachToTarget(Transform target)
     {
         //sr.sprite = buriedSprite;
