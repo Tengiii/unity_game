@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerMana : MonoBehaviour
 {
     public Slider slider;
+    public Slider manaPotionSlider;
+
     public float manaRestoreCooldown;
     
     private float manaRestoreTimer;
@@ -32,6 +34,9 @@ public class PlayerMana : MonoBehaviour
     {
         slider.maxValue = StatsMgr.Instance.maxMana;
         slider.value = StatsMgr.Instance.curMana;
+
+        manaPotionSlider.maxValue = manaRestoreCooldown;
+        manaPotionSlider.value = manaRestoreTimer;
     }
 
     private void RegMana()

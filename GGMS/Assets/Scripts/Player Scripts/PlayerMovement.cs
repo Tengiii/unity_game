@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public PlayerCombat playerCombat;
     public TrailRenderer tr;
+    public Slider dashCooldownSlider;
 
     private bool isKnockedBack;
     private bool canDash = true;
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float dashingPower = 25.0f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 5.0f;
+    private float dashingTimer;
 
     private void Update()
     {
@@ -28,7 +31,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Dash") && canDash)
         {
             StartCoroutine(DashHorizontal());
+            dashingTimer = dashingCooldown;
         }
+        dashingTimer -= Time.deltaTime;
+        UpdateUI();
     }
 
 
@@ -72,8 +78,14 @@ public class PlayerMovement : MonoBehaviour
         isKnockedBack = false;
     }
     
-    private IEnumerator DashHorizontal()
+    private void UpdateUI()
     {
+        dashCooldownSlider.maxValue = dashingCooldown;
+        dashCooldownSlider.value = dashingTimer;
+    }
+
+    private IEnumerator DashHorizontal()
+    { 
         Debug.Log("DASH");
         canDash = false;
         isDashing = true;
@@ -85,5 +97,4 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
-
 }

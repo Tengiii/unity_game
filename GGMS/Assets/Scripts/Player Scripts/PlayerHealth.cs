@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Animator outlinesAnim;
     public Slider healthSlider;
+    public Slider potionCooldownSlider;
 
     private float healingCooldown = 15.0f;
     private float healingTimer;
@@ -46,7 +47,8 @@ public class PlayerHealth : MonoBehaviour
         if (Input.GetButtonDown("Healing"))
         {
             healThePlayer();
-        }    
+        }
+        UpdateCooldownsUI();
     }
 
     public void changeHealth(int amount)
@@ -70,6 +72,12 @@ public class PlayerHealth : MonoBehaviour
     {
         healthSlider.maxValue = StatsMgr.Instance.maxHealth;
         healthSlider.value = StatsMgr.Instance.curHealth;
+        
+    }
+    public void UpdateCooldownsUI()
+    {
+        potionCooldownSlider.maxValue = healingCooldown;
+        potionCooldownSlider.value = healingTimer;
     }
   
 }

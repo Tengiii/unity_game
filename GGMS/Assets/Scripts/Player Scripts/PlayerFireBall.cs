@@ -7,10 +7,10 @@ public class PlayerFireBall : MonoBehaviour
     public Transform launchPoint;
     public GameObject fireBallPrefab;
 
-    private Vector2 aimDir = Vector2.right;
     public float shootCooldown = 1.5f;
     public float spellCost;
- 
+
+    private Vector2 aimDir = Vector2.right;
     private float shootTimer;
 
     // Update is called once per frame
