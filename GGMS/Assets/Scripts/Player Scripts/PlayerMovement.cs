@@ -21,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
     private float dashingCooldown = 5.0f;
     private float dashingTimer;
 
+    PlayerHealth pHealth;
+
+    private bool isAlive;
+
     private void Update()
     {
         if (Input.GetButtonDown("Attack"))
@@ -68,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         isKnockedBack = true;
         Vector2 dir = (transform.position - enemy.transform.position).normalized;
         rb.velocity = dir * knockbackForce;
+
         StartCoroutine(KnockbackCounter(stunTime));
     }
 

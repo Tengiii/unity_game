@@ -3,7 +3,11 @@ guid: ba48d8ec736ff504da3d86fb434880a5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - outlinesAnim: {instanceID: 0}
+  - healthSlider: {instanceID: 0}
+  - potionCooldownSlider: {instanceID: 0}
+  - deathScreen: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
