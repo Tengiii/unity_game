@@ -89,6 +89,11 @@ public class PlayerMovement : MonoBehaviour
         dashCooldownSlider.value = dashingTimer;
     }
 
+    public void PlayFootstep()
+    {
+        Sound_Mgr.PlaySound(SoundType.FOOTSTEP, 0.1f);
+    }
+
     private IEnumerator DashHorizontal()
     { 
         Debug.Log("DASH");
@@ -96,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
+        Sound_Mgr.PlaySound(SoundType.DASH, 0.1f);
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         isDashing = false;

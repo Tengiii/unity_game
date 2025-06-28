@@ -24,7 +24,7 @@ public class Enemy_Spawn : MonoBehaviour
     {
         if (count >= maxE) return;
 
-        Vector3 sp = transform.position + UnityEngine.Random.insideUnitSphere * spawnRadius;
+        Vector2 sp = transform.position + UnityEngine.Random.insideUnitSphere * spawnRadius;
         Instantiate(enemyPrefabs, sp, Quaternion.identity);
         count++;
 

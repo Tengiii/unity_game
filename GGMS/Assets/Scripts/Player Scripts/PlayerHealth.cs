@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     private float healingCooldown = 15.0f;
     private float healingTimer;
-
+    private int tempHp;
     //smirec
     public GameObject deathScreen;
     private bool zmar;
@@ -79,6 +79,7 @@ public class PlayerHealth : MonoBehaviour
     public void changeHealth(int amount)
     {
         StatsMgr.Instance.curHealth += amount;
+        Sound_Mgr.PlaySound(SoundType.HURT, 0.1f);
         outlinesAnim.Play("OnDmgOutlines");
 
         if (StatsMgr.Instance.curHealth <= 0 && !zmar)

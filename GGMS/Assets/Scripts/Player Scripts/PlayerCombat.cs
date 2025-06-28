@@ -25,7 +25,7 @@ public class PlayerCombat : MonoBehaviour
     {   
         if(timer <= 0) { 
             anim.SetBool("isAttacking", true);
-
+            Sound_Mgr.PlaySound(SoundType.SLASH, 0.1f);
             timer = cooldown;
         }
     }
@@ -40,7 +40,8 @@ public class PlayerCombat : MonoBehaviour
         {
             if (enemy.isTrigger) continue;
 
-            Debug.Log(enemy);
+            Debug.Log(enemy); 
+            Sound_Mgr.PlaySound(SoundType.SWORD_HIT,0.2f);
             enemy.GetComponent<Enemy_Health>().changeHealth(-StatsMgr.Instance.damage);
             enemy.GetComponent<Enemy_knockback>().knockback(transform, StatsMgr.Instance.knockbackForce, StatsMgr.Instance.knockbackTime, StatsMgr.Instance.stunTime);
            
