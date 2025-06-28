@@ -6,6 +6,7 @@ public class Lightning : MonoBehaviour
 {
     public Animator anim;
     public LayerMask enemyLayer;
+    public AudioSource audiofx;
 
     public float lifeSpan = 0.15f;
     public int initDamage;
@@ -17,6 +18,8 @@ public class Lightning : MonoBehaviour
     {
         damage = Mathf.CeilToInt(initDamage * StatsMgr.Instance.magic);
         anim.SetBool("isStrinking", true);
+        audiofx = GetComponent<AudioSource>();
+        audiofx.Play();
         Destroy(gameObject, lifeSpan);
     }
 

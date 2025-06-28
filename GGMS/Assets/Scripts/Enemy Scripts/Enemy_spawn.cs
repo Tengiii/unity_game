@@ -34,4 +34,10 @@ public class Enemy_Spawn : MonoBehaviour
         count--;
         count = Mathf.Max(0, count);
     }
+    private void OnDrawGizmosSelected()
+    {
+        float alpha = 0.2f;
+        Gizmos.color = new Color(1f, 0f, 1f, alpha);
+        Gizmos.DrawSphere(transform.position, spawnRadius);
+    }
 }

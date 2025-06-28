@@ -17,6 +17,7 @@ public class FireBall : MonoBehaviour
     public LayerMask obstacleLayer;
 
     public Animator anim;
+    public AudioSource soundfx;
 
     private int damage;
 
@@ -26,6 +27,8 @@ public class FireBall : MonoBehaviour
         RotateFireball();
         damage = Mathf.CeilToInt(initDamage * StatsMgr.Instance.magic);
         anim.SetBool("isFlying", true);
+        soundfx = GetComponent<AudioSource>();
+        soundfx.Play();
         Destroy(gameObject, lifeSpan);
     }
 

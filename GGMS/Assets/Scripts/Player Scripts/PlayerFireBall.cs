@@ -6,6 +6,7 @@ public class PlayerFireBall : MonoBehaviour
 {
     public Transform launchPoint;
     public GameObject fireBallPrefab;
+    
 
     public float shootCooldown = 1.5f;
     public float spellCost;
