@@ -14,6 +14,7 @@ public class StatsMgr : MonoBehaviour
     private float magicMultiplier = 1.2f;
     private float manaMultiplier = 1.3f;
     private float manaRestoreMultiplier = 1.25f;
+    private float speedCap = 8f;
 
     [Header("Combat Stats")]
     public int damage;
@@ -62,7 +63,14 @@ public class StatsMgr : MonoBehaviour
     }
     public void UpdateSpeed()
     {
-        speed *= speedMultiplier;
+        if (speed < speedCap)
+        {
+            speed *= speedMultiplier;
+        }else
+        {
+            speed = speedCap;
+        }
+        
         //Debug.Log(speed);
     }
 
@@ -77,7 +85,7 @@ public class StatsMgr : MonoBehaviour
         magic *= magicMultiplier;
         maxMana *= manaMultiplier;
         manaRestore *= manaRestoreMultiplier;
-        Debug.Log("Magia" + magic);
-        Debug.Log("Max Mana" + maxMana);
+        //Debug.Log("Magia" + magic);
+        //Debug.Log("Max Mana" + maxMana);
     }
 }

@@ -47,8 +47,8 @@ public class FireBall : MonoBehaviour
             //AttachToTarget(collision.gameObject.transform);
             anim.SetBool("isFlying", false);
             anim.SetBool("hitATarget", true);
-            Debug.Log("Fire ball hit the player");
-            Debug.Log("Damage: "+damage);
+            Debug.Log("Fire ball hit the player and dealt "+ damage + " damage");
+            
 
         }
         else if ((obstacleLayer.value & (1 << collision.gameObject.layer)) > 0)

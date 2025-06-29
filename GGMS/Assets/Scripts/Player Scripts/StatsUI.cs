@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class StatsUI : MonoBehaviour
 {
@@ -40,13 +41,29 @@ public class StatsUI : MonoBehaviour
     {
         StatSlot[0].GetComponentInChildren<TMP_Text>().text = "Damage: " + StatsMgr.Instance.damage;
     }
-    public void UpdateSpeed()
-    {
-        StatSlot[2].GetComponentInChildren<TMP_Text>().text = "Speed: " + StatsMgr.Instance.speed;
-    }
     public void UpdateHealth()
     {
         StatSlot[1].GetComponentInChildren<TMP_Text>().text = "Health: " + StatsMgr.Instance.maxHealth;
+    }
+    public void UpdateSpeed()
+    {
+        decimal decimalSpeed = Math.Round((decimal)StatsMgr.Instance.speed, 2);
+        StatSlot[2].GetComponentInChildren<TMP_Text>().text = "Speed: " + decimalSpeed;
+    }
+    public void UpdateMagic()
+    {
+        decimal decimalMagic = Math.Round((decimal)StatsMgr.Instance.magic, 2);
+        StatSlot[3].GetComponentInChildren<TMP_Text>().text = "Magic dmg: " + decimalMagic;
+    }
+    public void UpdateMana()
+    {
+        decimal decimalMana = Math.Round((decimal)StatsMgr.Instance.maxMana, 2);
+        StatSlot[4].GetComponentInChildren<TMP_Text>().text = "Max mana: " + decimalMana;
+    }
+    public void UpdateResilience()
+    {
+        decimal decimalResilience = Math.Round((decimal)StatsMgr.Instance.resilience, 2);
+        StatSlot[5].GetComponentInChildren<TMP_Text>().text = "Resilience: " + decimalResilience;
     }
 
     public void UpdateAllStats()
@@ -54,5 +71,8 @@ public class StatsUI : MonoBehaviour
         UpdateDamage();
         UpdateHealth();
         UpdateSpeed();
+        UpdateMagic();
+        UpdateMana();
+        UpdateResilience();
     }
 }
