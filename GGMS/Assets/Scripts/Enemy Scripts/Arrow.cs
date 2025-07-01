@@ -29,7 +29,7 @@ public class Arrow : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if ((playerLayer.value> 0))
+        if ((playerLayer.value > 0))
         {
             var playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
@@ -62,7 +62,7 @@ public class Arrow : MonoBehaviour
         Destroy(gameObject, lifeSpan);
     }
     void OnDrawGizmos()
-    { 
+    {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 1f);
 

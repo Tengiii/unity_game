@@ -44,7 +44,6 @@ public class PlayerCombat : MonoBehaviour
             Sound_Mgr.PlaySound(SoundType.SWORD_HIT,0.2f);
             enemy.GetComponent<Enemy_Health>().changeHealth(-StatsMgr.Instance.damage);
             enemy.GetComponent<Enemy_knockback>().knockback(transform, StatsMgr.Instance.knockbackForce, StatsMgr.Instance.knockbackTime, StatsMgr.Instance.stunTime);
-           
         }
     }
 

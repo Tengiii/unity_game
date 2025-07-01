@@ -137,5 +137,6 @@ public enum ArcherState
 {
     Idle,
     Run,
-    Shooting
+    Shooting,
+    Knockback
 }

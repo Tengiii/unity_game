@@ -43,12 +43,12 @@ public class FireBall : MonoBehaviour
         if ((enemyLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             collision.gameObject.GetComponent<Enemy_Health>().changeHealth(-damage);
-            collision.gameObject.GetComponent<Enemy_knockback>().knockback(transform, knockbackForce, knockbackTime, stunTime);
+            
             //AttachToTarget(collision.gameObject.transform);
             anim.SetBool("isFlying", false);
             anim.SetBool("hitATarget", true);
             Debug.Log("Fire ball hit the player and dealt "+ damage + " damage");
-            
+            collision.gameObject.GetComponent<Enemy_knockback>().knockback(transform, knockbackForce, knockbackTime, stunTime);
 
         }
         else if ((obstacleLayer.value & (1 << collision.gameObject.layer)) > 0)

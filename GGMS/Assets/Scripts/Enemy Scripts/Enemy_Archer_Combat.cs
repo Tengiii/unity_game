@@ -10,6 +10,7 @@ public class Enemy_Archer_Combat : MonoBehaviour
     public Transform player;
     float Timer = 0f;
     float cooldown = 2.5f;
+
     public void Shoot(Transform target)
     {
         target = target ?? player;
