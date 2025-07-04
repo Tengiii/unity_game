@@ -190,4 +190,5 @@ MonoBehaviour:
   itemSO: {fileID: 11400000, guid: 52c1d5ebc716ff14aac1db13cf15b69f, type: 2}
   sr: {fileID: 2986348244180403536}
   anim: {fileID: 9126891976786428184}
+  canPickUp: 1
   quantity: 1

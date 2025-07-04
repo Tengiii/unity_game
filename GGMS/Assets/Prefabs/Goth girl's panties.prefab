@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1909709990882176067}
   - component: {fileID: 5622117806286320515}
   m_Layer: 0
-  m_Name: Goth girl's panties
+  m_Name: Ymm, koronkowe majty??
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +106,7 @@ MonoBehaviour:
   itemSO: {fileID: 11400000, guid: d6481353d3835ce42bf8412c201cc9a5, type: 2}
   sr: {fileID: 6301814593511414166}
   anim: {fileID: 1909709990882176067}
+  canPickUp: 1
   quantity: 1
 --- !u!1 &1603226393378280089
 GameObject:

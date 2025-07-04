@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5235539749015606346}
   - component: {fileID: 5794511967274013253}
   m_Layer: 0
-  m_Name: Painting #1
+  m_Name: Obraz #1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -24.687202, y: -16.444456, z: -0.28656912}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3665263997761950219}
@@ -190,4 +190,5 @@ MonoBehaviour:
   itemSO: {fileID: 11400000, guid: 649f57e16c8687144bb64aec5bdb262d, type: 2}
   sr: {fileID: 4784894523524365825}
   anim: {fileID: 5235539749015606346}
+  canPickUp: 1
   quantity: 1

@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140d31f96a0764540a250677dd764f89, type: 3}
   m_Name: Painting2
   m_EditorClassIdentifier: 
-  itemName: Painting #2
-  itemDescription: Pirced niples are dead :(
+  itemName: Obraz #2
+  itemDescription: Kurcze fajne, ale gdzie jest piercing w sutkach ???
   icon: {fileID: 21300000, guid: eecd84e7c5b197a4ca98cbe835678bbb, type: 3}
   isGold: 0
+  stackSize: 3
   curHealth: 0
+  curMana: 0
   maxHealth: 0
   speed: 0
   damage: 0
