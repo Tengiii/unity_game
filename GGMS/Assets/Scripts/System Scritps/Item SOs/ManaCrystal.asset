@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 140d31f96a0764540a250677dd764f89, type: 3}
-  m_Name: Painting1
+  m_Name: ManaCrystal
   m_EditorClassIdentifier: 
-  itemName: Obraz #1
-  itemDescription: Zwykly badziew, nawet stup nie pokazala... Ty a moze to czyis
-    portret
-  icon: {fileID: 21300000, guid: 6ea29704f4087064d8ce79732656b0d3, type: 3}
+  itemName: Krysztal many
+  itemDescription: Czarnuchu dobrze wiesz co to robi
+  icon: {fileID: 481089006, guid: a121f21a24920e14ea0466ef17bd579a, type: 3}
   isGold: 0
-  stackSize: 3
+  stackSize: 5
   curHealth: 0
-  curMana: 0
+  curMana: 10
   maxHealth: 0
   speed: 0
   damage: 0

@@ -4,17 +4,16 @@ using UnityEngine;
 using System;
 public class ShopMgr : MonoBehaviour
 {
-    public static event Action<ShopMgr, bool> OnShopStateChanged;
+    
 
     [SerializeField] private List<ShopItems> shopItems;
     [SerializeField] private ShopSlot[] shopSlots;
     [SerializeField] private Inventory_Mgr inventoryMgr;
-    
+    public ShopKeeper shopKeeper;
 
     private void Start()
     {
         PopulateShopItems();
-        OnShopStateChanged?.Invoke(this, true);
     }
 
     public void PopulateShopItems()
@@ -72,8 +71,6 @@ public class ShopMgr : MonoBehaviour
             }
         }
     }
-
-
 }
 
 [System.Serializable]
@@ -81,5 +78,4 @@ public class ShopItems
 {
     public ItemSO itemSO;
     public int price;
-
 }

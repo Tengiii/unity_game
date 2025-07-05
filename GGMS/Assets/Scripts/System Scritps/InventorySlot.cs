@@ -23,18 +23,24 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
     private void OnEnable()
     {
-        ShopMgr.OnShopStateChanged += HandleShopStateChanged;
+        ShopKeeper.OnShopStateChanged += HandleShopStateChanged;
     }
 
     private void OnDisable()
     {
-        ShopMgr.OnShopStateChanged -= HandleShopStateChanged;
+        ShopKeeper.OnShopStateChanged -= HandleShopStateChanged;
     }
 
 
     private void HandleShopStateChanged(ShopMgr shopMgr, bool isOpen)
     {
-        activeShop = isOpen ? shopMgr : null;
+        //activeShop = isOpen ? shopMgr : null;
+       
+        if (isOpen)
+            activeShop = shopMgr;
+        else
+            activeShop = null;
+        Debug.Log("Shop state changed: " + isOpen);
     }
 
 

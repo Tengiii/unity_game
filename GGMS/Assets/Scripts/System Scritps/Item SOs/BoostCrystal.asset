@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 140d31f96a0764540a250677dd764f89, type: 3}
-  m_Name: Painting1
+  m_Name: BoostCrystal
   m_EditorClassIdentifier: 
-  itemName: Obraz #1
-  itemDescription: Zwykly badziew, nawet stup nie pokazala... Ty a moze to czyis
-    portret
-  icon: {fileID: 21300000, guid: 6ea29704f4087064d8ce79732656b0d3, type: 3}
+  itemName: Kunzyt
+  itemDescription: Pozostawia posmak chrzanu
+  icon: {fileID: -2047308371, guid: c1d6126935e71d741b60eed31dd1dabd, type: 3}
   isGold: 0
   stackSize: 3
-  curHealth: 0
-  curMana: 0
+  curHealth: -3
+  curMana: 20
   maxHealth: 0
-  speed: 0
-  damage: 0
-  duration: 0
+  speed: 3
+  damage: 5
+  duration: 30

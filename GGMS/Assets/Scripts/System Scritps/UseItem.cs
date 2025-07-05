@@ -12,7 +12,14 @@ public class UseItem : MonoBehaviour
             StatsMgr.Instance.curMana += itemSO.curMana;
         if (itemSO.maxHealth > 0)
             StatsMgr.Instance.maxHealth += itemSO.maxHealth;
+        if (itemSO.damage > 0)
+            StatsMgr.Instance.damage += itemSO.damage;
+        if (itemSO.speed > 0)
+            StatsMgr.Instance.speed += itemSO.speed;
 
+        if (itemSO.curHealth < 0)
+            StatsMgr.Instance.curHealth += itemSO.curHealth;
+       
 
         if (itemSO.duration > 0)
             StartCoroutine(EffectTimer(itemSO, itemSO.duration));
@@ -23,5 +30,9 @@ public class UseItem : MonoBehaviour
         yield return new WaitForSeconds(duration);
         if (itemSO.maxHealth > 0)
             StatsMgr.Instance.maxHealth -= itemSO.maxHealth;
+        if (itemSO.speed > 0)
+            StatsMgr.Instance.speed -= itemSO.speed;
+        if (itemSO.damage > 0)
+            StatsMgr.Instance.damage -= itemSO.damage;
     }
 }
