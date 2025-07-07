@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5ad10fe90adf0408c31c07094ee363, type: 3}
+  m_Name: MetalowyDialogue2_2
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Kurwa czlowieku w pizdzie mam kim jestes. Powiedz po prostu po chuj do
+      mnie przyszedles i skonczmy to.
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: '23 lata przezylem. Moze i nigdy nie poruchalem, ale wazne ze ten chuj
+      tez nie poruchal. Tak czy srak. Co w zyciu wypilem to moje. Ile podwalilem.
+      Tez moje. Moge juz umierac. '
+  options:
+  - optionText: Przeciez cie nie zabije debilu
+    nextDialogue: {fileID: 11400000, guid: 34f98b8d377edb4489998949f2525951, type: 2}

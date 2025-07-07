@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5ad10fe90adf0408c31c07094ee363, type: 3}
+  m_Name: MetalowyDialogue2_1
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: A. No dobra. W takim razie.. Nie masz moze przy sobie troche wody. Strasznie
+      mnie suszy.
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Tak jak mowilem. Skonczyla mi sie 2 miesiace temu. I teraz siedze tu jak
+      najwiekszy przegryw. Bez nogi, bez cipki coby chociaz sobie poruchac i co najgorsze...
+      bez gorzaly. Ah, moze lepiej byloby gdybys jednak zakonczyl moje cierpenie.
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Dobrze, ze chociaz reki mi metalowej nie zrobil bo bym sobie chyba jaja
+      zmiazdzyl.
+  options:
+  - optionText: 'Chryste panie. Nie, nie mam przy sobie wodki. '
+    nextDialogue: {fileID: 0}

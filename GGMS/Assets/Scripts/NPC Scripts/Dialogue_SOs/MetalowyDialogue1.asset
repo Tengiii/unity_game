@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5ad10fe90adf0408c31c07094ee363, type: 3}
+  m_Name: MetalowyDialogue1
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Bandyci mnie oszczedzili, wiec zjawil sie rycerz zeby mnie wykonczyc. Tylko
+      nie pierdol nic o rycerskich cnotach.
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Ostatnie 3 miesiace z metalowa noga daly mi sporo do myslenia. Pierwszy
+      byl sredni, bo przynajmniej mialem wode. Ale teraz... Teraz to dalbym dupy
+      zeby ten cwel zrobil ja z aluminium a nie tungstenu...
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Kurwa, no jakim trzeba byc potworem, kurwa z tungstenu, jebany specjalnie
+      to zrobil bo wiedzial ze nie dam rady z tym chodzic. To cacko wazy 40 kilo
+      jego mac. Jak mam sie niby z tym kurwa poruszac.
+  options:
+  - optionText: Spokojnie, przeciez cie nie zabije
+    nextDialogue: {fileID: 11400000, guid: 34f98b8d377edb4489998949f2525951, type: 2}
+  - optionText: Nie jestem rycerzem cwelu.
+    nextDialogue: {fileID: 11400000, guid: 1ef51266994e8934b9bea33e2890c081, type: 2}
