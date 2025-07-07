@@ -1,10 +1,4 @@
-
- DO ZROBIENIA NA DZIŚ         	    
-Zrobic lucznikow jako enemy  
-
-
-
-DO ZROBIENIA TERAZ             
-Dodać kobe jako NPC	      
-Dodać gotki jako enemy      
+DO ZROBIENIE
+Dodac item heroiny i kokainy
+Dodac dzwieki tam gdzie trzeba czyli level up sprzedawanie kupowanie itd
 
