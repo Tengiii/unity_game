@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5ad10fe90adf0408c31c07094ee363, type: 3}
+  m_Name: MetalowyDialogue3_1
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Aa. Niech bedzie. Wodecka za informacje to dobra wymiana. Sluchaj... zwa
+      go Jerker. Ja to tam nie wiem o nim za duzo. Tylko tyle, ze pracowalismy dla
+      tej samej osoby. No, przynajmniej swego czasu...
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: 'Pewnego dnia. Sam nie wiem, cos w niego wstapilo. Kurwa, do dzis pamietam
+      jak razem gapilim sie na cycki takiej jednej. "Kiedys, moj przyjacielu.. te
+      cycuszki beda moje" tak wlasnie mowil. Ale wtedy, nawet na nie spojrzal. '
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Rozumiesz. To byla nasza tradycja.. wywalic jezor, powiedziec cos sprosnego
+      to byla nasza rzecz kurwa. Ale tamtego dnia.. Nawet na nia nie spojrzal.
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: Klasycznie jak to po robocie poszedlem pic, no co innego moze robic taki
+      ciezko pracujacy facet jak ja. Dziwki i gorzala. Takie moje motto. Wracajac,
+      obudzilem sie zwiazany bez nogi.
+  - speaker: {fileID: 11400000, guid: f63540e4a089eff46b52f044ce192f02, type: 2}
+    text: 'Skurwysyn nie dal mi nawet znieczulenia jak wkrecal mi metalowe prety
+      do kosci... Tfu, niech bedzie przeklety jego chuj mac. '
+  options:
+  - optionText: Czyli jednak go znales?
+    nextDialogue: {fileID: 0}
+  - optionText: Uh-huh ?
+    nextDialogue: {fileID: 0}
+  requiredNPCs: []
+  requiredItems: []

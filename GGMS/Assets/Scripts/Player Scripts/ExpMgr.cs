@@ -12,11 +12,13 @@ public class ExpMgr : MonoBehaviour
     public float expGrowthMultiplier = 1.2f;
     public Slider expSlider;
     public TMP_Text levelText;
+    public AudioSource soundfx;
 
     public static event Action<int> OnLevelUp;
 
     private void Start()
     {
+        soundfx = GetComponent<AudioSource>();
         UpdateUI();
     }
 
@@ -49,6 +51,7 @@ public class ExpMgr : MonoBehaviour
 
     private void LevelUp()
     {
+        soundfx.Play();
         curLevel++;
         curExp -= expToLevel;
         expToLevel = Mathf.RoundToInt(expToLevel * expGrowthMultiplier);

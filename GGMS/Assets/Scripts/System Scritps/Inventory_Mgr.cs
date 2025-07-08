@@ -5,12 +5,26 @@ using TMPro;
 
 public class Inventory_Mgr : MonoBehaviour
 {
+    public static Inventory_Mgr Instance;
+
     public InventorySlot[] itemSlots;
     public int gold;
     public TMP_Text goldText;
     public UseItem useItem;
     public GameObject lootPrefab;
     public Transform player;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -104,4 +118,18 @@ public class Inventory_Mgr : MonoBehaviour
             slot.UpdateUI();
         }
     }
+
+    public bool HasItem(ItemSO itemSO)
+    {
+        foreach (var slot in itemSlots)
+        {
+            if(slot.itemSO == itemSO && slot.quantity > 0)
+            {
+                UseItem(slot);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

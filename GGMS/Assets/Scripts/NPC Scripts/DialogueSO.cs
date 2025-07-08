@@ -10,6 +10,7 @@ public class DialogueSO : ScriptableObject
 
     [Header("Conditional Requirements (Optional)")]
     public NPCso[] requiredNPCs;
+    public ItemSO[] requiredItems;
 
     public bool IsConditionMet()
     {
@@ -26,8 +27,20 @@ public class DialogueSO : ScriptableObject
             }
         }
         Debug.Log("Is condition met return true");
+        
+        if(requiredItems.Length > 0)
+        {
+            foreach (var item in requiredItems)
+            {
+                if (!Inventory_Mgr.Instance.HasItem(item))
+                    return false;
+            }
+        }
+
         return true;
     }
+
+
 
 }
 
