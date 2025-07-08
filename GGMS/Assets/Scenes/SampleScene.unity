@@ -96452,7 +96452,10 @@ GameObject:
   - component: {fileID: 1479962482}
   - component: {fileID: 1479962484}
   - component: {fileID: 1479962481}
+  - component: {fileID: 1479962487}
   - component: {fileID: 1479962480}
+  - component: {fileID: 1479962489}
+  - component: {fileID: 1479962488}
   m_Layer: 0
   m_Name: Koba
   m_TagString: Untagged
@@ -96569,12 +96572,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479962479}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.24, y: 41.62, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6732464, y: 57.8946, z: 0.052370567}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1670062179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1479962484
 CapsuleCollider2D:
@@ -96611,6 +96614,62 @@ CapsuleCollider2D:
   m_Offset: {x: 0.025536673, y: -0.07661002}
   m_Size: {x: 0.8745984, y: 2.1003451}
   m_Direction: 0
+--- !u!50 &1479962487
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479962479}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1479962488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479962479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15aad38bd7cb34b8bb03e055cc9238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talk: {fileID: 1479962489}
+--- !u!114 &1479962489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479962479}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59ab3eba16f8054d8afc8af3dfdba0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1479962487}
+  conversations:
+  - {fileID: 11400000, guid: a362bd8e20a5d324ab0e1931be5eee7d, type: 2}
+  curConversation: {fileID: 0}
 --- !u!224 &1480551429 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3031172547070479953, guid: c377e589a3010ce40a59c32e551dd1d4,
@@ -96920,13 +96979,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548474184}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.1, y: -20.59, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.466753, y: -4.3153973, z: 0.052370567}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 885010557}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1670062179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1548474189
 MonoBehaviour:
@@ -96993,7 +97052,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1548474185}
-  dialogueSO: {fileID: 11400000, guid: e7c505930f0672d47bf933a6ac58d2e3, type: 2}
+  conversations:
+  - {fileID: 11400000, guid: e7c505930f0672d47bf933a6ac58d2e3, type: 2}
+  - {fileID: 11400000, guid: 34f98b8d377edb4489998949f2525951, type: 2}
+  - {fileID: 11400000, guid: 1ef51266994e8934b9bea33e2890c081, type: 2}
+  curConversation: {fileID: 0}
 --- !u!114 &1548474192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97997,6 +98060,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668860699}
   m_CullTransparentMesh: 1
+--- !u!1 &1670062178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670062179}
+  m_Layer: 0
+  m_Name: NPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670062179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670062178}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.566753, y: -16.274603, z: -0.052370567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1479962483}
+  - {fileID: 1548474188}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1678563488 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7027108084513716252, guid: b4548b07967eb5e4a8961960dc74eeb8,
@@ -99339,6 +99435,7 @@ GameObject:
   - component: {fileID: 1929910723}
   - component: {fileID: 1929910722}
   - component: {fileID: 1929910727}
+  - component: {fileID: 1929910728}
   m_Layer: 5
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -99464,6 +99561,18 @@ MonoBehaviour:
   - {fileID: 904368638}
   - {fileID: 241323367}
   isDialogueActive: 0
+--- !u!114 &1929910728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929910721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615899aceb9b4b7428c915f7442363a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1930398920 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3031172547070479953, guid: c377e589a3010ce40a59c32e551dd1d4,
@@ -102755,7 +102864,6 @@ SceneRoots:
   - {fileID: 263709879}
   - {fileID: 110430265}
   - {fileID: 780865820}
-  - {fileID: 1548474188}
   - {fileID: 822377690}
   - {fileID: 1423417737}
   - {fileID: 838252887}
@@ -102763,5 +102871,5 @@ SceneRoots:
   - {fileID: 355371709}
   - {fileID: 267555432}
   - {fileID: 40853027}
-  - {fileID: 1479962483}
   - {fileID: 1929910726}
+  - {fileID: 1670062179}

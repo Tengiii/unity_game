@@ -46,7 +46,8 @@ public class DialogueMgr : MonoBehaviour
         curDialgoue = dialogueSO;
         dialogueIndex = 0;
         isDialogueActive = true;
-        ShowDialogue();
+        //ShowDialogue();
+        AdvanceDialogue();
     }
 
     public void AdvanceDialogue()
@@ -63,6 +64,8 @@ public class DialogueMgr : MonoBehaviour
     private void ShowDialogue()
     {
         DialogueLine line = curDialgoue.lines[dialogueIndex];
+
+        DialogueHistoryTracker.Instance.RecordNPC(line.speaker);
         
         portrait.sprite = line.speaker.portrait;
         NPCname.text = line.speaker.NPCname;

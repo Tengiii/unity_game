@@ -7,6 +7,28 @@ public class DialogueSO : ScriptableObject
 {
     public DialogueLine[] lines;
     public DialogueOption[] options;
+
+    [Header("Conditional Requirements (Optional)")]
+    public NPCso[] requiredNPCs;
+
+    public bool IsConditionMet()
+    {
+        if(requiredNPCs.Length > 0)
+        {
+            foreach (var npc in requiredNPCs)
+            {
+                if (!DialogueHistoryTracker.Instance.HasSpokenWith(npc))
+                {
+                    Debug.Log("Is condition met returns false");
+                    return false;
+                }
+                    
+            }
+        }
+        Debug.Log("Is condition met return true");
+        return true;
+    }
+
 }
 
 [System.Serializable]
