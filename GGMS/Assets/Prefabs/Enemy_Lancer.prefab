@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 7111290275341905318}
   - component: {fileID: 5004763945180003655}
   - component: {fileID: 5833742028254479954}
+  - component: {fileID: 2125068746468336875}
   m_Layer: 7
   m_Name: Enemy_Lancer
   m_TagString: Untagged
@@ -622,6 +623,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfded2e6ac8ea2147a687b562170fe81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2125068746468336875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5828632232288478301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5beca446cf5e22949b6ba5ea8d5dab78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showLogs: 0
+  lootTable:
+  - itemPrefab: {fileID: 1729327782413165081, guid: 3a47375f9b7655a4f98b3fa2e6cb2422,
+      type: 3}
+    dropChance: 60
+  - itemPrefab: {fileID: 5618648685784161987, guid: af8a03637d5c0214fb77d1731cf1c17a,
+      type: 3}
+    dropChance: 10
+  - itemPrefab: {fileID: 762666179719587958, guid: d028ad518a6f9234c95cd5d9ea0ea9b0,
+      type: 3}
+    dropChance: 10
+  - itemPrefab: {fileID: 3527127902936358161, guid: 96b533e98e3b85b47951aa8bd74f33c4,
+      type: 3}
+    dropChance: 5
+  dropPosition: {fileID: 7861645792840211240}
+  chanceForDrop: 50
 --- !u!1 &7813100329643079400
 GameObject:
   m_ObjectHideFlags: 0

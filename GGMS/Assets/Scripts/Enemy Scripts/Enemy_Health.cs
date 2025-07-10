@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class Enemy_Health : MonoBehaviour
 {
-    public int expReward = 3;
     public delegate void EnemyDefeated(int exp);
     public static event EnemyDefeated OnMonsterDefeated;
+    
+    public int expReward = 3;
     public int curHealth;
     public int maxHealth;
     [SerializeField] enemy_healthbar healthBar;
+
+    private DropLoot dropLoot;
     private void Awake()
     {
         healthBar = GetComponentInChildren<enemy_healthbar>();
+        dropLoot = GetComponent<DropLoot>();
     }
     private void Start()
     {
@@ -32,6 +36,7 @@ public class Enemy_Health : MonoBehaviour
         else if(curHealth <= 0)
         {
             OnMonsterDefeated?.Invoke(expReward);
+            dropLoot?.DropLootAtDeath();
             Destroy(gameObject);
         }
     }
